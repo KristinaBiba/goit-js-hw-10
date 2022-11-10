@@ -1,7 +1,6 @@
 import { Notify } from '../node_modules/notiflix/build/notiflix-notify-aio';
 
 export function fetchCountries(nameOfCountry) {
-  console.log(nameOfCountry);
   return fetch(`
 https://restcountries.com/v3.1/name/${nameOfCountry}?fields=name,capital,population,flags,languages`)
     .then(response => {
