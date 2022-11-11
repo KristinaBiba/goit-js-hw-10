@@ -12,4 +12,3 @@ https://restcountries.com/v3.1/name/${nameOfCountry}?fields=name,capital,populat
     })
     .catch(error => console.log(error));
 }
-// ?fields=name.official,capital,population,flags.svg,languages
