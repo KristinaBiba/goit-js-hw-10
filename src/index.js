@@ -1,5 +1,6 @@
 import './css/styles.css';
-import { Notify } from '../node_modules/notiflix/build/notiflix-notify-aio';
+import { Notify } from 'notiflix';
+// '../node_modules/notiflix/build/notiflix-notify-aio'
 import { fetchCountries } from './fetchCountries.js';
 
 const inputEl = document.querySelector('#search-box');
@@ -22,7 +23,7 @@ function onInput(e) {
         Notify.info(
           'Too many matches found. Please enter a more specific name.'
         );
-      } else if ((data.length > 1) & (data.length <= 10)) {
+      } else if (data.length > 1 && data.length <= 10) {
         fillCountryList(data);
       } else {
         fillCountryInfo(data);
